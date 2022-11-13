@@ -43,33 +43,33 @@ class LinkList {
 // ########################################################
 // ########################################################
 
-    const head = new Node(90);
+const head = new Node(90);
 
-    const linking = new LinkList(head);
-    linking.add(80);
-    linking.add(70);
-    linking.add(60);
-    linking.add(50);
+const linking = new LinkList(head);
+linking.add(80);
+linking.add(70);
+linking.add(60);
+linking.add(50);
 
 
-    console.log(linking);
-    // LinkList {
-    //     head: Node { data: 90, next: Node { data: 80, next: [Node] } },
-    //     size: 5
-    // }
+console.log(linking);
+// LinkList {
+//     head: Node { data: 90, next: Node { data: 80, next: [Node] } },
+//     size: 5
+// }
 
-    console.log(JSON.stringify(linking));
-    // {"head":
-    //     {"data":90,"next":
-    //         {"data":80,"next":
-    //             {"data":70,"next":
-    //                 {"data":60,"next":
-    //                     {"data":50,"next":
-    //                         null }}}}} ,
-    //                         "size" : 5 }
+console.log(JSON.stringify(linking));
+// {"head":
+//     {"data":90,"next":
+//         {"data":80,"next":
+//             {"data":70,"next":
+//                 {"data":60,"next":
+//                     {"data":50,"next":
+//                         null }}}}} ,
+//                         "size" : 5 }
 
-    console.log(linking.size);
-    // 5
+console.log(linking.size);
+// 5
 
 // ########################################################
 // ########################################################

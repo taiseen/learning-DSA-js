@@ -23,27 +23,27 @@ class Queue {
     }
 }
 
-    // ########################################################
-    // ########################################################
-    // ########################################################
+// ########################################################
+// ########################################################
+// ########################################################
 
-    // Object Creating || Dynamic Thing
+// Object Creating || Dynamic Thing
 
-    // Create an object of Queue class
-    const numbers = new Queue();
+// Create an object of Queue class
+const numbers = new Queue();
 
-    numbers.enqueue(2);
-    numbers.enqueue(4);
-    numbers.enqueue(6);
-    numbers.enqueue(8);
+numbers.enqueue(2);
+numbers.enqueue(4);
+numbers.enqueue(6);
+numbers.enqueue(8);
 
-    console.log(numbers.queue);
-    // [ 2, 4, 6, 8 ]
+console.log(numbers.queue);
+// [ 2, 4, 6, 8 ]
 
-    numbers.dequeue();
-    console.log(numbers.queue);
-    // [ 4, 6, 8 ]
+numbers.dequeue();
+console.log(numbers.queue);
+// [ 4, 6, 8 ]
 
-    // ########################################################
-    // ########################################################
-    // ########################################################
+// ########################################################
+// ########################################################
+// ########################################################

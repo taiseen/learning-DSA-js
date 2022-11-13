@@ -28,37 +28,37 @@ class Stack {
     }
 }
 
-    // ########################################################
-    // ########################################################
-    // ########################################################
+// ########################################################
+// ########################################################
+// ########################################################
 
-    // Object Creating || Dynamic Thing
+// Object Creating || Dynamic Thing
 
-    // Create an object of Stack class
-    const person = new Stack();
+// Create an object of Stack class
+const person = new Stack();
 
-    person.add('Sam');
-    person.add('Jon');
-    person.add('Ken');
-    person.add('Lee');
+person.add('Sam');
+person.add('Jon');
+person.add('Ken');
+person.add('Lee');
 
-    // total object calling [its not a good approach]
-    console.log(person)
-    //Stack { stack: [ 'Sam', 'Jon', 'Ken', 'Lee' ] }
+// total object calling [its not a good approach]
+console.log(person)
+//Stack { stack: [ 'Sam', 'Jon', 'Ken', 'Lee' ] }
 
-    // its a good approach
-    console.log(person.stack)
-    // [ 'Sam', 'Jon', 'Ken', 'Lee' ]
+// its a good approach
+console.log(person.stack)
+// [ 'Sam', 'Jon', 'Ken', 'Lee' ]
 
 
-    const getRemovedPerson = person.remove();
-    console.log(person)
-    console.log(person.stack)
-    console.log(getRemovedPerson)
-    // Stack { stack: [ 'Sam', 'Jon', 'Ken' ] }
-    // [ 'Sam', 'Jon', 'Ken' ]
-    // Lee
+const getRemovedPerson = person.remove();
+console.log(person)
+console.log(person.stack)
+console.log(getRemovedPerson)
+// Stack { stack: [ 'Sam', 'Jon', 'Ken' ] }
+// [ 'Sam', 'Jon', 'Ken' ]
+// Lee
 
-    // ########################################################
-    // ########################################################
-    // ########################################################
+// ########################################################
+// ########################################################
+// ########################################################
