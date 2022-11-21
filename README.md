@@ -12,3 +12,5 @@
 
 
 ## Algorithm
+* Linear Search
+* Binary Search
