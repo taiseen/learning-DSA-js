@@ -1,12 +1,12 @@
 // 21 Nov 2022
 
 const searchValue = 60;
-const arrayDataSet = [10, 20, 30, 40, 50, 60, 70, 80, 90];
+const arrayDataSet = [10, 30, 50, 70, 90, 20, 40, 60, 80];
 
 const linearSearch = (array, data) => {
 
-    // array.forEach((data, index) => {
-    //     if (data === value) {
+    // array.forEach((value, index) => {
+    //     if (value === data) {
     //         return `Data found at ${index} index position`;
     //     }
     // });
