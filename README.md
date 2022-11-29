@@ -12,5 +12,8 @@
 
 
 ## Algorithm
-* Linear Search
-* Binary Search
+1. Linear Search
+2. Binary Search
+    * order agnostic binary-search
+    * floor celling value found 
+    * duplicate value counting

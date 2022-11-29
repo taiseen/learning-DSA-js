@@ -1,6 +1,6 @@
 // 26 Nov 2022
 
-const searchValue = 200;
+const searchValue = 220;
 const arrayDataSet = [700, 200, 90, 80, 70, 60, 50, 40, 30, 20, 10];
 
 // binary search have a pre condition... 
@@ -16,6 +16,8 @@ const order_agnostic_binary_search = (array, data) => {
     let start = 0;
     let end = array.length - 1;
 
+    // this descending making is very important...
+    // is array : ascending or descending?
     array[start] < array[end]
         ? asc = true
         : asc = false
@@ -28,11 +30,12 @@ const order_agnostic_binary_search = (array, data) => {
             return `Data found at ${mid} index position`;
         }
 
-        asc
-            ? array[mid] < data
+
+        asc                         // for ordering...
+            ? array[mid] < data     // if ascending...
                 ? start = mid + 1
                 : end = mid - 1
-            : array[mid] > data
+            : array[mid] > data     // if descending...
                 ? start = mid + 1
                 : end = mid - 1
     }
