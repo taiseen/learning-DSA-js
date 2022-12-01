@@ -15,5 +15,5 @@
 1. Linear Search
 2. Binary Search
     * order agnostic binary-search
-    * floor celling value found 
+    * floor celling value finding 
     * duplicate value counting
