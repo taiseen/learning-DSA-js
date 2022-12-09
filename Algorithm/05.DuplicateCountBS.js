@@ -1,6 +1,6 @@
 // 29 Nov 2022
 
-const searchValue = 8;
+const searchValue = 6;
 const arrayDataSet = [1, 2, 3, 4, 4, 4, 5, 5, 5, 6, 6, 6, 6, 7, 8, 8, 9];
 // must need to be sorted array...
 
@@ -21,7 +21,7 @@ const floorCellingBS = (array, data) => {
 
             count++
 
-            // right side of the array from mind [index] point
+            // left side of the array from mind [index] point
             for (let i = mid - 1; i >= 0; i--) {
                 array[i] === data && count++;
             }
@@ -37,6 +37,7 @@ const floorCellingBS = (array, data) => {
                 return `This value present only ${count} time...`;
             }
 
+            // * this style wont work..., but why?
             // count > 1
             //     ? `This value found ${count} times...`
             //     : `This value present only ${count} time...`
