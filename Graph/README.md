@@ -33,3 +33,27 @@ It is unidirectional.
 
 ### 2. Undirected graph 
 No arrow head, mean no directionality
+
+
+## Graph Traversal:
+
+* Depth First Traversal
+* Breadth First Traversal
+These 2 Traversal techniques can be used for explore the same graph in `Different Order`. 
+* How you access items from array is determined this `Different Ordering...` `array.pop()` / `array.shift()`
+
+
+### Depth First Traversal
+From the starting point, pick a direction & travel in that same direction as far as possible, before switching directions.<br/>
+* Go from neighbor to next neighbor
+* its uses a `Stack` [LIFO]
+* `Vertical` Data Structure
+* it'll explore ONE directions at a time. 
+
+### Breadth First Traversal
+From the starting point, node explore all of its immediate neighbors, kind of in a circle like this & just keep applying that behavior. <br/>
+* Go from associated all neighbor
+* its uses a `Queue` [FIFO]
+* `Horizontal` Data Structure
+* it'll explore ALL directions evenly.
+
