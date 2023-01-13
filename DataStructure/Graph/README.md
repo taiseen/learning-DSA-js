@@ -47,7 +47,7 @@ No arrow head, mean no directionality
 * Breadth First Traversal
 
 #### These 2 Traversal techniques can be used for explore the same graph in `Different Order`. 
-* How you access items from array is determined this `Different Ordering...` `array.pop()` / `array.shift()`
+* How you access items from array (`Stack` / `Queue`) is determined this `Different Ordering...` `array.pop()` / `array.shift()`
 
 
 ### Depth First Traversal
@@ -59,7 +59,7 @@ From the starting point, pick a direction & travel in that same direction as far
 * it'll explore `ONE directions` at a time. 
 
 ### Breadth First Traversal
-From the starting point, node explore all of its immediate neighbors, kind of in a circle like this & just keep applying that behavior.
+From the starting point, node explore all of its associated immediate neighbors, kind of in a circle like this & just keep applying that behavior.
 * Go from associated all neighbor
 * its uses a `Queue` [FIFO]
 * its operation is `.shift()`

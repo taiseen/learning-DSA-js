@@ -46,7 +46,7 @@ const depth_first_traversing = (graph, startingNode) => {
 
 
 // any recursion uses the underlying callStack
-// iterating through this empty array...  mean you have zero iterations. 
+// iterating through this empty array... mean you have zero iterations. 
 // If you have zero iterations, then you never make a recursive call. 
 // That's the same thing as having a base case...
 // A base case is really just a scenario where we don't have a recursive call
