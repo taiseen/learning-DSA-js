@@ -27,9 +27,7 @@ It is just relationship between pair of nodes...
 |6.| Acyclic            | ➡️➡️   |
 
 * Acyclic = No cycles
- if I did a traversal, on the
-30:19
-Sigma graph, I would get an infinite loop.
+* if I did a traversal, on the Sigma graph, I would get an infinite loop.
 
 <br/>
 
@@ -51,12 +49,15 @@ No arrow head, mean no directionality
 
 
 ### Depth First Traversal
-From the starting point, pick a direction & travel in that same direction as far as possible, before switching directions.
+From the starting point, pick a direction & travel in that same direction as far as possible, before switching directions. <br />
+Continuing to explore `new nodes` as we see them, until we hit a `dead end` is how DFS work
+
 * Go from neighbor to next neighbor
 * its uses a `Stack` [LIFO]
 * its operation is `.pop()`
 * `Vertical` Data Structure
 * it'll explore `ONE directions` at a time. 
+* we can use also `recursive call` as `callStack` here for traversing operation...
 
 ### Breadth First Traversal
 From the starting point, node explore all of its associated immediate neighbors, kind of in a circle like this & just keep applying that behavior.
@@ -65,4 +66,21 @@ From the starting point, node explore all of its associated immediate neighbors,
 * its operation is `.shift()`
 * `Horizontal` Data Structure
 * it'll explore `ALL directions` evenly.
+
+
+
+
+So not create an infinite cycle of recursion, 
+we can fix this, to do is ideally `only call the DFS function` 
+on nodes that we've never visited.
+
+one way to do this is to essentially mark nodes that have already been visited.
+we can do this by maintaining a list of boolean values, 
+where each one is mapped to a vertex of the graph
+initially all these values will be false 
+since we haven't visited any vertex 
+but as soon as we visit a vertex we can mark the vertex as something 
+we've seen before by changing the respective index to true 
+
+
 

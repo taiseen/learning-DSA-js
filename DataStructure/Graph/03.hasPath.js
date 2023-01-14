@@ -1,5 +1,7 @@
 // 14 - Jan - 2023
 
+// we should representing graphs by adjacency list, 
+// so an operation like traversing/finding the neighbors of a node is quite simple.
 
 // adjacency list
 // directed acyclic graph 

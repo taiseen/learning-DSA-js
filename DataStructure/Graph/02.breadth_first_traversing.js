@@ -7,6 +7,9 @@
 // }
 
 
+// we should representing graphs by adjacency list, 
+// so an operation like traversing/finding the neighbors of a node is quite simple.
+
 // adjacency list | data representation for graph data.
 const graph = {
     a: ['b', 'c'],
