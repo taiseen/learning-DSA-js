@@ -13,24 +13,29 @@ const graph = {
 
 const connectedComponentCount = graph => {
 
-    let count = 0;
+    let numberOfLand = 0;
     const visited = new Set();
 
-    // loop through ==> Object
+    // loop through ==> {Object}
     for (let node in graph) {
-        exploreGraph(graph, node, visited) && count++;
+        exploreGraph(graph, node, visited) && numberOfLand++;
     }
 
-    return count;
+    return numberOfLand;
 }
 
 
 const exploreGraph = (graph, currentNode, visited) => {
 
+    // if currentNode node is visited, 
+    // then return false from here, there's no reason to travel through this currentNode anymore. 
+    // & this how we can avoid an ♾️ infinite recursion/cycle in the graph traversing process...
     if (visited.has(String(currentNode))) return false;
+
+    // this node is Not visited, but we visited right now, so we add it into the visited set...
     visited.add(String(currentNode));
-    
-    // loop through ==> Array
+
+    // loop through ==> [Array]
     for (let neighbor of graph[currentNode]) {
 
         exploreGraph(graph, neighbor, visited);
