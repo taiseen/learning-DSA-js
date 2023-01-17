@@ -13,13 +13,44 @@ const graph = {
     8: [0, 5],
 }
 
+const largestComponent = graph => {
 
-// If this condition is not true, 
-// then it's the first time I'm seeing this node, so I need to count it.
+    let largestComponent = 0;
+    const visited = new Set();
 
-// & add it to visited that
-// way I don't get into a cycle into the node later on
+    // loop through ==> { Object }
+    for (let node in graph) {
+
+        const size = exploreSize(graph, node, visited);
+
+        size > largestComponent && (largestComponent = size);
+    }
+
+    return largestComponent;
+}
 
 
-// great thing about SET is in O(1) time, I can add something into the set.
-// And I can also check for something within the SET is going to be very quick for our traversal. 
+
+const exploreSize = (graph, currentNode, visited) => {
+
+    // checking the memorizing the path...
+    if (visited.has(currentNode)) return false;
+
+    // if this condition is not true...
+    // then memorizing the path...
+    visited.add(currentNode);
+    // then it's the first time we seeing this node, so we need to count it.
+    // & add it to visited that way we don't get into a cycle into the node later on
+
+    let size = 1;
+
+    // loop through ==> [ Array ]
+    for (let neighbor of graph[currentNode]) {
+        size += exploreSize(graph, neighbor, visited);
+    }
+
+    return size;
+}
+
+const result = largestComponent(graph);
+console.log(result);
