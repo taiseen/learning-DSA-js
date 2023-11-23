@@ -19,3 +19,15 @@
     * duplicate value counting
     * [Missing Array]
 3. Time Complexity
+
+```
+DataStructure is a way to store the data,
+inside the memory of the computer
+
+there are lots of different methods are available
+```
+
+```
+Algorithm is set of instruction, that computer needs to follow
+in order to come up with solution
+```
