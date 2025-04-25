@@ -1,3 +1,5 @@
+// 24 - April - 2025
+
 const DEFAULT_CAPACITY = 10;
 
 
@@ -8,6 +10,13 @@ class CustomArray {
         this.array = new Array(capacity);
     }
 
+
+    #checkIndex(index) {
+        // Thinking 1: Index validation
+        if (index < 0 || index > this.length) {
+            throw new Error("Index out of bounds");
+        }
+    }
 
     // insert data at last position of array
     // Time complexity: O(1)   
@@ -22,10 +31,7 @@ class CustomArray {
 
         console.log("\nBefore :-  ", this.array);
 
-        // Thinking 1: Index validation
-        if (index < 0 || index > this.length) {
-            throw new Error("Index out of bounds");
-        }
+        this.#checkIndex(index); // check index is valid or not
 
         // Thinking 2. Capacity check (optional: to prevent overflow)
         if (this.length >= this.capacity) {
@@ -42,7 +48,8 @@ class CustomArray {
         // So, we need to insert value after this loop.
         // Time complexity: O(n)
         for (let i = this.length; i > index; i--) {
-            // empty space in array = inset data
+            // empty space in array = inset data 
+            // making space by shifting things to the right
             this.array[i] = this.array[i - 1]; // data shift into right
 
             console.log(`Array[${i}] :-`, this.array);
@@ -54,6 +61,29 @@ class CustomArray {
 
         // Thinking 6. Update length
         this.length++;
+    }
+
+    remove(index) {
+
+        this.#checkIndex(index); // check index is valid or not
+
+        const removedElement = this.array[index]; // store removed element
+
+        if (index === this.length - 1) {
+            this.array[index] = undefined; // empty last index
+            this.length--; // decrease length of array
+            return removedElement; // return removed element
+        }
+
+        for (let i = index; i < this.length; i++) {
+            this.array[i] = this.array[i + 1]; // data shift into left
+        }
+
+        // this.array[this.length - 1] = undefined; // empty last index
+
+        this.length--; // decrease length of array
+
+        return removedElement; // return removed element
     }
 }
 
@@ -68,7 +98,7 @@ array.insert(0, 99);
 // array.insert(0, 19);
 // array.insert(0, 59);
 
-
+array.remove(array.length - 1);
 
 console.log('\n==================================================');
 console.log('Array :-', array.array);
