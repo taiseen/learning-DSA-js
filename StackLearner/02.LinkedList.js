@@ -7,11 +7,14 @@ class Node {
 
 const head = new Node(1);
 
-const second = new Node(2);
-head.next = second;
+const node2 = new Node(2);
+head.next = node2;
 
-const third = new Node(3);
-second.next = third;
+const node3 = new Node(3);
+node2.next = node3;
+
+const node4 = new Node(4);
+node3.next = node4;
 
 
 
@@ -22,8 +25,8 @@ class LinkedList {
         let current = head;
 
         while (current) {
-            console.log(JSON.stringify(current.value, undefined, 2));
             current = current.next;
+            console.log(JSON.stringify(current, undefined, 2));
         }
     }
 }
