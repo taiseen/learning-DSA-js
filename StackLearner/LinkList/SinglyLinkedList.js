@@ -5,6 +5,8 @@ class Node {
     }
 }
 
+2:34
+
 class SinglyLinkedList {
     constructor() {
         this.head = null;
@@ -13,6 +15,13 @@ class SinglyLinkedList {
 
     prepend(value) {
         const newNode = new Node(value);
+
+        if (!this.head) {
+            this.head = newNode; // if list is empty, set head to new node
+            this.length++;
+            return;
+        }
+
         newNode.next = this.head; // new node points to the current head
         this.head = newNode; // head update to new node
         this.length++;
