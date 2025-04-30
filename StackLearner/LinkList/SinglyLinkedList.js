@@ -5,25 +5,48 @@ class Node {
     }
 }
 
-2:34
-
 class SinglyLinkedList {
     constructor() {
         this.head = null;
         this.length = 0;
     }
 
-    prepend(value) {
+    append(value) {
         const newNode = new Node(value);
 
         if (!this.head) {
-            this.head = newNode; // if list is empty, set head to new node
+            // if list is empty, set head to new node
+            this.head = newNode;
             this.length++;
             return;
         }
 
-        newNode.next = this.head; // new node points to the current head
-        this.head = newNode; // head update to new node
+        let current = this.head;
+        while (current.next) {
+            current = current.next;
+        }
+
+        // add new node at the end of the list
+        current.next = newNode;
+        this.length++;
+    }
+
+    prepend(value) {
+        const newNode = new Node(value);
+
+        if (!this.head) {
+            // if list is empty, set head to new node
+            this.head = newNode;
+            this.length++;
+            return;
+        }
+
+        // new node points to the current head
+        newNode.next = this.head;
+
+        // head update to new node
+        this.head = newNode;
+
         this.length++;
     }
 
@@ -41,10 +64,12 @@ class SinglyLinkedList {
 }
 
 const list = new SinglyLinkedList();
-list.prepend(13);
+list.prepend(13); // set at first position | left side
 list.prepend(80);
 list.prepend(57);
 list.prepend(60);
+
+list.append(15); // set at last position | right side
 
 
 console.log(list.toString()); // 4 -> 3 -> 2 -> 1
