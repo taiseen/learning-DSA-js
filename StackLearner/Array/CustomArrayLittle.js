@@ -3,7 +3,7 @@
 const DEFAULT_CAPACITY = 10;
 
 
-class CustomArray {
+class CustomArrayLittle {
     constructor(capacity = DEFAULT_CAPACITY) {
         this.capacity = capacity;
         this.length = 0;
@@ -87,7 +87,7 @@ class CustomArray {
     }
 }
 
-const array = new CustomArray();
+const array = new CustomArrayLittle();
 array.push(10);
 array.push(20);
 // array.push(30);
