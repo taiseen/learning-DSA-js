@@ -17,20 +17,26 @@ class CircularLinkedList {
 
         if (!this.head) {
             this.head = newNode;
-            newNode.next = this.head;
+            newNode.next = this.head; // 🔄️ create circular link
             return;
         }
 
+        // if the list is not empty...
         let current = this.head;
+        // this time not null checking...
+        // end there by founding that where is next === head...
+        // so for running this loop we have to check like this !==
+        // so traverse the list until you find the head...
         while (current.next !== this.head) {
             current = current.next;
         }
 
         current.next = newNode;
-        newNode.next = this.head;
+        newNode.next = this.head; // 🔄️ create circular link
     }
 
     remove(data) {
+        //  early return if list is empty
         if (!this.head) {
             return false;
         }
@@ -45,11 +51,11 @@ class CircularLinkedList {
             } else {
                 // Find last node to update its next pointer
                 let last = this.head;
-                while (last.next !== this.head) {
+                while (last.next !== this.head) { // head checking...
                     last = last.next;
                 }
                 this.head = this.head.next;
-                last.next = this.head;
+                last.next = this.head; // 🔄️ create circular link
             }
             this.size--;
             return true;
@@ -57,14 +63,14 @@ class CircularLinkedList {
 
         // Search for data in other nodes
         do {
-            prev = current;
-            current = current.next;
+            prev = current; // node update
+            current = current.next; // node update
             if (current.data === data) {
-                prev.next = current.next;
+                prev.next = current.next; // link update
                 this.size--;
                 return true;
             }
-        } while (current !== this.head);
+        } while (current !== this.head); // head checking...
 
         return false;
     }
