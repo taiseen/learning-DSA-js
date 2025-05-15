@@ -6,3 +6,4 @@
   - Basic Node Creation
   - Basic Linked List
   - Singly Linked List
+- HashTable
