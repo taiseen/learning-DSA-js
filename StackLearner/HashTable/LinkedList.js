@@ -24,7 +24,7 @@ class LinkedList {
             return;
         }
 
-        newNode.next = this.head;
+        newNode.next = this.head; // First in First set - order / O(1) order
         this.head = newNode;
     }
 
@@ -32,8 +32,11 @@ class LinkedList {
         if (!this.head) return null;
 
         let current = this.head;
+
         while (current) {
+
             if (current.key === key) return current;
+
             current = current.next;
         }
 
@@ -47,8 +50,11 @@ class LinkedList {
 
     *entries() {
         let current = this.head;
+
         while (current) {
+
             yield [current.key, current.value];
+
             current = current.next;
         }
     }
